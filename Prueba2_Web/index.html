@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Perfil de Riesgo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Perfil de Riesgo</h1>
+    <form id="riskForm">
+      <!-- Campos requeridos -->
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="genero">Género:</label>
+      <select id="genero" name="genero" required>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="paisNacimiento">País de Nacimiento:</label>
+    <select id="paisNacimiento" name="paisNacimiento" required>
+    <option value="Panama">Panama</option>
+    <option value="Brasil">Brasil</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Colombia">Colombia</option>
+    <option value="España">España</option>
+    </select>
+
+      <label for="paisResidencia">País de Residencia:</label>
+      <select id="paisResidencia" name="paisResidencia" required>
+        <option value="Panama">Panama</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Colombia">Colombia</option>
+        <option value="España">España</option>
+        </select>
+
+      <label for="profesion">Profesión:</label>
+      <select id="profesion" name="profesion" required>
+        <option value="Abogado">Abogado</option>
+        <option value="Ingeniero">Ingeniero</option>
+        <option value="Médico">Médico</option>
+        <option value="Contador">Contador</option>
+        <option value="Otras">Otras</option>
+      </select>
+
+      <label for="edad">Edad:</label>
+      <select id="edad" name="edad" required>
+        <option value="Menos 25">Menos de 25</option>
+        <option value="Entre 25 y 55">Entre 25 y 55</option>
+        <option value="Mayor a 55">Mayor a 55</option>
+      </select>
+
+      <label for="nivelIngresos">Nivel de Ingresos:</label>
+      <select id="nivelIngresos" name="nivelIngresos" required>
+        <option value="Menosde20Kanual">Menos de 20K anual</option>
+        <option value="Entre20Ky75K">Entre 20K y 75K</option>
+        <option value="Mayorde75K">Mayor de 75K</option>
+      </select>
+
+      <label for="pep">PEP (Persona Expuesta Políticamente):</label>
+      <select id="pep" name="pep" required>
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <input type="button" value="Calcular Perfil de Riesgo" onclick="calcularPerfilRiesgo()">
+    </form>
+    <div id="resultado" style="display: none;">
+      <h2>Resultado</h2>
+      <p id="perfilRiesgo"></p>
+    </div>
+    <div id="resultado2" style="display: none;">
+        <h2>Resultado sin usar el %</h2>
+        <p id="perfilRiesgo2"></p>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
